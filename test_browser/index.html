@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"> 
+	<title> hancode</title>
+</head>
+
+<body>
+	<button onclick="doTest()">Click me</button>
+	
+<script>
+    console.log( "hello" );
+var doTest = function(){
+	console.log( "CALL doTest()" );
+
+   var script = document.createElement('script');
+   script.onload = function() {
+     console.log("Script loaded and ready");
+   };
+   script.src = "A041_test.js";
+   document.getElementsByTagName('head')[0].appendChild(script);  	
+};
+	
+</script>
+</body>
+</html>
