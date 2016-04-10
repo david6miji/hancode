@@ -9,17 +9,24 @@
 	<button onclick="doTest()">Click me</button>
 	
 <script>
-    console.log( "hello" );
+	console.log( "hello" );
 var doTest = function(){
 	console.log( "CALL doTest()" );
 
-   var script = document.createElement('script');
-   script.onload = function() {
-     console.log("Script loaded and ready");
-   };
-   script.src = "https://github.com/david6miji/hancode/tree/master/codes/"
-			  + "00000000/0000/0000/0000/000000000001/f.js";
-   document.getElementsByTagName('head')[0].appendChild(script);  	
+	var script = document.createElement('script');
+	script.onload = function() {
+		console.log("Script loaded and ready");
+	};
+			  
+	script.type = "text/javascript";
+	
+	var repo 	= "http://rawgit.com/david6miji/hancode/";
+	var codes	= "master/codes/";
+	var uuid    = "00000000/0000/0000/0000/000000000001/";
+	var func    = "f.js";
+	
+	script.src = repo + codes + uuid + func;
+	document.getElementsByTagName('head')[0].appendChild(script);  	
 };
 	
 </script>
